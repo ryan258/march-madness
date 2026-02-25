@@ -1,0 +1,49 @@
+espn:
+  base_url: "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball"
+  scoreboard_url: "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard"
+  teams_url: "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams"
+  rankings_url: "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/rankings"
+  rate_limit_seconds: 0.5
+  max_retries: 3
+
+seasons:
+  - 2018
+  - 2019
+  - 2020
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  tournament_data: "data/tournaments"
+  models: "models"
+
+power_conferences:
+  - "ACC"
+  - "Big 12"
+  - "Big East"
+  - "Big Ten"
+  - "Pac-12"
+  - "SEC"
+  - "AAC"
+
+scoring:
+  round_points:
+    1: 10
+    2: 20
+    3: 40
+    4: 80
+    5: 160
+    6: 320
+
+pool:
+  pool_size: 285
+  strategy: "leverage"
+  champion_filter: true
+  luck_fade_threshold: 3.0
+  early_round_chalk_threshold: 0.55
+  upset_leverage_threshold: 2.0
